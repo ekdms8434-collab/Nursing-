@@ -1,0 +1,19 @@
+{
+  "name": "nursing-performance-local",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "nursing-performance-local": "file:",
+    "yauzl": "^3.2.0"
+  }
+}
