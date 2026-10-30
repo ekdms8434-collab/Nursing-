@@ -42,13 +42,48 @@
     #studentView.detail-mode .student-grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:20px}
     #studentView.detail-mode .student-grid>.stack{display:contents}
     #studentView.detail-mode .student-grid .panel{grid-column:1 / -1}
+    .roadmap-head{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+    .roadmap-progress{min-width:280px;flex:1}
+    .roadmap-progress-track{height:9px;background:#e9eef5;border-radius:999px;overflow:hidden;margin-top:6px}
+    .roadmap-progress-track>span{display:block;height:100%;background:linear-gradient(90deg,#10b981,#3b82f6)}
+    .roadmap-foundation{border:1px solid #d9e3f0;border-radius:10px;background:#f8fbff;padding:10px 12px;margin-bottom:12px}
+    .roadmap-foundation-head{display:flex;justify-content:space-between;gap:10px;align-items:center}
+    .roadmap-foundation-head strong{font-size:12px;color:#1e3a5c}
+    .roadmap-foundation-detail{margin-top:8px;font-size:11px;color:#4b6079}
+    .roadmap-focus-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .roadmap-term{border:1px solid #dce6f1;border-radius:10px;background:#f8fbff}
+    .roadmap-term-head{width:100%;display:flex;align-items:center;justify-content:space-between;background:transparent;border:0;padding:12px 14px;color:#1d3552}
+    .roadmap-term-head:hover{background:#edf4fd}
+    .roadmap-term-head strong{font-size:13px}
+    .roadmap-term-head small{display:block;color:var(--muted);font-size:11px}
+    .roadmap-term-body{padding:0 14px 14px;display:grid;gap:8px}
+    .roadmap-card{border:1px solid #dbe5ef;background:white;border-radius:10px;padding:10px 12px}
+    .roadmap-card.done{background:#ecfdf5;border-color:#9bd7bd}
+    .roadmap-card.progress{border-color:#7aa8f8;box-shadow:0 0 0 2px #deebff}
+    .roadmap-card.open{border-style:dashed}
+    .roadmap-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+    .roadmap-top h4{margin:0;font-size:13px}
+    .roadmap-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px}
+    .roadmap-pill{font-size:10px;border-radius:999px;padding:2px 8px;border:1px solid #d7e3ef;color:#415a77;background:#f7fbff}
+    .roadmap-pill.required{border-color:#cbd5e1;background:#eef2ff;color:#3730a3}
+    .roadmap-status{font-size:10px;font-weight:700;border-radius:999px;padding:3px 8px;white-space:nowrap}
+    .roadmap-status.done{color:#065f46;background:#bbf7d0}
+    .roadmap-status.progress{color:#1d4ed8;background:#dbeafe;animation:pulseRoadmap 1.8s ease-in-out infinite}
+    .roadmap-status.open{color:#6b7280;background:#f3f4f6}
+    .roadmap-mandatory{display:inline-block;margin-top:6px;border-radius:999px;padding:3px 8px;font-size:10px;font-weight:800;color:#fff;background:linear-gradient(90deg,#ef4444,#7c3aed)}
+    .survey-builder{margin-top:16px;padding:14px;border:1px solid #dbe6f2;border-radius:10px;background:#f8fbff}
+    .survey-builder h4{margin:0 0 10px;font-size:13px}
+    .survey-preview{margin-top:12px;padding:10px 12px;border:1px solid #dbe6f2;border-radius:8px;background:white}
+    .survey-preview ol{margin:8px 0 0 18px;padding:0}
+    .survey-preview li{margin:4px 0}
+    @keyframes pulseRoadmap{0%,100%{box-shadow:0 0 0 0 rgba(37,99,235,.25)}50%{box-shadow:0 0 0 6px rgba(37,99,235,0)}}
     #studentView.core-detail-mode #studentCompetencyPanel{grid-column:1 / span 4;height:100%}
     #studentView.core-detail-mode #studentCompetencyDetailPanel{grid-column:5 / -1;height:100%}
     #studentView.core-detail-mode #studentCompetencyDetailPanel .table-wrap{max-height:560px;overflow:auto}
     @media(min-width:1201px){#kpis{grid-template-columns:repeat(6,minmax(0,1fr))}#analysisKpis{grid-template-columns:repeat(4,minmax(0,1fr))}}
     @media(min-width:1920px){.admin-panel .tabs{gap:12px}.student-grid{grid-template-columns:340px minmax(0,1fr) minmax(0,1fr)}.student-grid>.stack:nth-child(2){display:contents}}
     @media(max-width:1200px){.sidebar{width:190px;padding:24px 12px}.shell{margin-left:190px}main{padding:24px}.topbar{padding:0 24px}.kpis{gap:10px;grid-template-columns:repeat(3,1fr)}.dashboard-grid{grid-template-columns:1fr}.admin-panel{margin-top:0}.charts{grid-template-columns:1fr 1fr}.student-grid{grid-template-columns:280px 1fr}.course-cards,.star-grid{grid-template-columns:1fr}#studentView.core-detail-mode #studentCompetencyPanel,#studentView.core-detail-mode #studentCompetencyDetailPanel{grid-column:1 / -1}}
-    @media(max-width:760px){.sidebar{position:static;width:auto;padding:13px 16px}.brand{padding:0 0 10px}.brand strong{font-size:18px}.brand small,.nav-label,.sidebar-bottom{display:none}.sidebar nav{display:flex;gap:4px;overflow:auto}.nav-button{width:auto;white-space:nowrap;padding:9px 12px;font-size:11px;margin:0}.nav-icon{display:none}.sidebar nav .nav-label{display:none}.shell{margin:0}.topbar{height:auto;min-height:68px;padding:13px 18px}.topbar-right .term,.user-label{display:none}main{padding:20px 16px}.page-heading{align-items:flex-start;flex-direction:column}h1{font-size:23px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi{padding:15px}.kpi-value{font-size:25px}.kpis .kpi:last-child{grid-column:span 2}.panel{padding:17px}.panel-heading{gap:10px;flex-wrap:wrap}.charts{grid-template-columns:1fr}.radar{max-width:290px}.student-grid{grid-template-columns:1fr}.course-cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.course-card{min-width:87%;scroll-snap-align:start}.field-row{grid-template-columns:1fr}.footer{flex-direction:column}.heatmap{border-spacing:3px}.heatmap th:first-child{min-width:90px}.heatmap td{font-size:13px}.heatmap th{font-size:9px}.actions button{font-size:12px}.tabs{gap:18px}#loginView{grid-template-columns:1fr;min-height:auto}.login-brand{padding:28px 24px 20px}.login-form-panel{padding:24px 20px 28px}}
+    @media(max-width:760px){.sidebar{position:static;width:auto;padding:13px 16px}.brand{padding:0 0 10px}.brand strong{font-size:18px}.brand small,.nav-label,.sidebar-bottom{display:none}.sidebar nav{display:flex;gap:4px;overflow:auto}.nav-button{width:auto;white-space:nowrap;padding:9px 12px;font-size:11px;margin:0}.nav-icon{display:none}.sidebar nav .nav-label{display:none}.shell{margin:0}.topbar{height:auto;min-height:68px;padding:13px 18px}.topbar-right .term,.user-label{display:none}main{padding:20px 16px}.page-heading{align-items:flex-start;flex-direction:column}h1{font-size:23px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi{padding:15px}.kpi-value{font-size:25px}.kpis .kpi:last-child{grid-column:span 2}.panel{padding:17px}.panel-heading{gap:10px;flex-wrap:wrap}.charts{grid-template-columns:1fr}.radar{max-width:290px}.student-grid{grid-template-columns:1fr}.roadmap-head{align-items:stretch}.roadmap-progress{min-width:0}.roadmap-focus-grid{grid-template-columns:1fr}.course-cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.course-card{min-width:87%;scroll-snap-align:start}.field-row{grid-template-columns:1fr}.footer{flex-direction:column}.heatmap{border-spacing:3px}.heatmap th:first-child{min-width:90px}.heatmap td{font-size:13px}.heatmap th{font-size:9px}.actions button{font-size:12px}.tabs{gap:18px}#loginView{grid-template-columns:1fr;min-height:auto}.login-brand{padding:28px 24px 20px}.login-form-panel{padding:24px 20px 28px}}
     @media print{@page{size:A4;margin:16mm}body{background:white;font-size:11px;color:#111}.sidebar,.shell,dialog,.toast,.error-banner,.skip{display:none!important}#printArea{display:block!important}#printArea h1{font-size:23px}#printArea h2{margin-top:22px;border-bottom:1px solid #ccc;padding-bottom:6px}#printArea p{white-space:pre-wrap;overflow-wrap:anywhere}#printArea table{white-space:normal}#printArea tr{break-inside:avoid}#printArea .report-meta{color:#555;font-size:10px}#printArea .radar{max-width:270px}#printArea .print-note{border:1px solid #aaa;padding:10px;font-size:10px;margin-top:20px}}
   </style>
 </head>
@@ -269,7 +304,7 @@
           <div class="stack">
             <section class="panel" id="studentCompetencyPanel"><div class="panel-heading"><div><h2>나의 6대 핵심역량</h2><p>데모 이수 내역 기반 참고 점수</p></div><span class="badge">GROWING</span></div><div id="studentRadar"></div><div class="course-summary" id="studentSummary"></div></section>
             <section class="panel" id="studentCompetencyDetailPanel"><div class="panel-heading"><div><h2>6대 핵심역량 상세 해석</h2><p>이수 현황 · 임상실습 성장일지 · e-포트폴리오를 함께 분석한 설명형 리포트</p></div><span class="section-tag">AI COACH · DEMO</span></div><p class="notice" style="margin-bottom:12px">외부 AI 전송 없이 브라우저 내부 규칙 기반으로 해석을 생성한 데모 화면입니다. 공식 평가나 임상 역량 인증 자료로 사용할 수 없습니다.</p><div id="competencyInsightSummary"></div><div id="competencyInsightCards" style="margin-top:14px"></div></section>
-            <section class="panel" id="studentRoadmapPanel"><h2>4년의 성장 로드맵</h2><p class="muted">권장 과정 대비 나의 이수 현황</p><ol class="timeline" id="timeline"></ol></section>
+            <section class="panel" id="studentRoadmapPanel"><div class="panel-heading"><div><h2>Non-Curricular Career Roadmap</h2><p>3·4학년 집중 설계형 비교과 로드맵과 방학 프로그램을 확인하세요.</p></div><span class="section-tag">CAREER PATH</span></div><div class="roadmap-head"><label class="field" style="margin:0;min-width:260px">목표 진로<select id="careerTarget"></select></label><div class="roadmap-progress"><div class="inline" style="justify-content:space-between"><strong style="font-size:12px" id="roadmapProgressText">3·4학년 비교과 이수율 0%</strong><span class="muted" id="roadmapProgressMeta"></span></div><div class="roadmap-progress-track" role="img" aria-label="3·4학년 비교과 이수율"><span id="roadmapProgressBar" style="width:0%"></span></div></div></div><div id="roadmapFoundation" class="roadmap-foundation"></div><div id="careerRoadmapTimeline" class="roadmap-focus-grid"></div></section>
           </div>
           <div class="stack">
             <section class="panel" id="enrollPanel"><div class="panel-heading"><div><h2>배움을 더하는 비교과</h2><p>수강 신청 · 데모 결제 원스톱</p></div><span class="section-tag">2026 · 1학기</span></div><div class="course-cards" id="courseCards"></div></section>
@@ -301,6 +336,12 @@
       <p class="notice">파일 용량은 1.5MB 이하만 업로드할 수 있습니다. 학생 계정별로 최대 20개까지 저장됩니다.</p>
       <div class="dialog-actions"><button type="button" data-close="practiceUploadDialog">취소</button><button type="submit" class="teal">업로드 저장</button></div>
     </form>
+  </dialog>
+  <dialog id="roadmapDetailDialog" aria-labelledby="roadmapDetailDialogTitle">
+    <div class="dialog-heading"><h2 id="roadmapDetailDialogTitle">학기/방학 로드맵 상세</h2><button type="button" data-close="roadmapDetailDialog" aria-label="닫기">×</button></div>
+    <p id="roadmapDetailSummary" class="muted"></p>
+    <div id="roadmapDetailBody"></div>
+    <div class="dialog-actions"><button type="button" data-close="roadmapDetailDialog">닫기</button></div>
   </dialog>
   <dialog id="programDialog" aria-labelledby="programDialogTitle">
     <div class="dialog-heading"><h2 id="programDialogTitle">비교과 프로그램 개설</h2><button type="button" data-close="programDialog" aria-label="닫기">×</button></div>
@@ -367,40 +408,30 @@
     const emptyCategoryAllocations=()=>Object.fromEntries(financeCategories.expense.map(c=>[c,0]));
     const allocatedByCategory=b=>financeCategories.expense.reduce((sum,c)=>sum+b.categoryAllocations[c],0);
     const metrics = [
-      {name:"투약과정 (기초 / 심화)", rate:92,complete:96,pre:65,post:91,satisfaction:4.7,n:236},
-      {name:"감염관리 (단독 / 융합)",rate:89,complete:94,pre:63,post:90,satisfaction:4.6,n:204},
-      {name:"근접오류 분석과정",rate:85,complete:92,pre:59,post:88,satisfaction:4.8,n:158},
-      {name:"KALS Provider",rate:95,complete:96,pre:62,post:95,satisfaction:4.9,n:182},
-      {name:"BLS Provider",rate:98,complete:97,pre:68,post:94,satisfaction:4.8,n:220},
-      {name:"임상 의사소통",rate:86,complete:91,pre:61,post:87,satisfaction:4.6,n:132},
-      {name:"임상 의학용어",rate:82,complete:90,pre:58,post:85,satisfaction:4.5,n:108}
+      {name:"투약과정 (기초 / 심화)", rate:0,complete:0,pre:0,post:0,satisfaction:0,n:0},
+      {name:"감염관리 (단독 / 융합)",rate:0,complete:0,pre:0,post:0,satisfaction:0,n:0},
+      {name:"근접오류 분석과정",rate:0,complete:0,pre:0,post:0,satisfaction:0,n:0},
+      {name:"KALS Provider",rate:0,complete:0,pre:0,post:0,satisfaction:0,n:0},
+      {name:"BLS Provider",rate:0,complete:0,pre:0,post:0,satisfaction:0,n:0},
+      {name:"임상 의사소통",rate:0,complete:0,pre:0,post:0,satisfaction:0,n:0},
+      {name:"임상 의학용어",rate:0,complete:0,pre:0,post:0,satisfaction:0,n:0}
     ];
     const cohorts = {
-      "2026-02":{label:"2026년 2월",rows:[{label:"KALS + 근접오류",counts:[35,12,3,0]},{label:"KALS + 의사소통",counts:[32,14,2,2]},{label:"BLS + 감염관리",counts:[25,18,4,3]},{label:"비교과 미이수",counts:[23,16,5,6]}]},
-      "2025-08":{label:"2025년 8월",rows:[{label:"KALS + 근접오류",counts:[24,10,3,3]},{label:"KALS + 의사소통",counts:[22,11,4,3]},{label:"BLS + 감염관리",counts:[18,13,5,4]},{label:"비교과 미이수",counts:[16,12,5,7]}]}
+      "2026-02":{label:"2026년 2월",rows:[]},
+      "2025-08":{label:"2025년 8월",rows:[]}
     };
-    const analysisRecords = Object.keys(cohorts).flatMap((cohort,c)=>Array.from({length:c?100:120},(_,i)=>{
-      const mask=(i*37+c*19)%128,roll=(i*17+c*11)%100;
-      return {cohort,completed:categories.map((_,k)=>k).filter(k=>mask&(1<<k)),outcome:roll<8?"unknown":roll<22?"unemployed":roll<53?"tertiary":roll<86?"general":"other"};
-    }));
+    const analysisRecords = [];
     let analysisScope={cohort:"all",course:"all",institution:"all"},analysisSelectedGroup=null,cqiEditMode=false;
     let studentDetailNav="";
     const legacySeed = () => ({
-      version:1,
-      programs:[
-        {id:"p-kals",name:"KALS Provider 과정",category:3,date:"2026-06-20",capacity:24,occupied:20,price:30000,target:"nursing"},
-        {id:"p-infection",name:"감염관리 융합 실습",category:1,date:"2026-06-24",capacity:30,occupied:22,price:0,target:"nursing"},
-        {id:"p-nearmiss",name:"근접오류 사례 분석",category:2,date:"2026-06-27",capacity:30,occupied:18,price:0,target:"nursing"},
-        {id:"p-communication",name:"임상 의사소통 · SBAR",category:5,date:"2026-07-04",capacity:30,occupied:16,price:0,target:"all"}
-      ],
-      enrollments:[
-        {id:"e-bls",programId:null,name:"BLS Provider",category:4,student:"홍길동",date:"2025-06-12",price:20000,payment:"데모 완료",attendance:100,approved:true},
-        {id:"e-med",programId:null,name:"투약 기초과정",category:0,student:"홍길동",date:"2025-09-18",price:0,payment:"무료",attendance:96,approved:true},
-        {id:"e-term",programId:null,name:"임상 의학용어",category:6,student:"홍길동",date:"2024-11-20",price:0,payment:"무료",attendance:100,approved:true},
-        {id:"e-demo",programId:null,name:"감염관리 단독과정",category:1,student:"데모 학생 A",date:"2026-05-21",price:0,payment:"무료",attendance:92,approved:false}
-      ],journals:[],portfolio:{hospital:"서울아산병원",theme:"safety",s:"",t:"",a:"",r:""}
+      version:7,
+      programs:[],
+      enrollments:[],
+      journals:[],
+      portfolio:{hospital:"서울아산병원",theme:"safety",s:"",t:"",a:"",r:""},
+      budgets:[]
     });
-    const storageKey = "nursing-performance-demo-v1";
+    const storageKey = "nursing-performance-data-v2";
     const isText = v => typeof v === "string";
     const integer = (v,min,max) => Number.isInteger(v) && v >= min && v <= max;
     const validDate = v => isText(v) && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v));
@@ -451,6 +482,7 @@
       }
     }
     let state=load(),activeTab="enrollment",studentMode=false,paymentProgram=null,toastTimer,managedProgramId=null,budgetProgramId=null,budgetSessionId=null,budgetSessionEditing=null,financeEditing=null,financeDeleting=null;
+    let roadmapCareer="tertiary",roadmapFoundationExpanded=false;
     const userStoreKey="nursing-performance-users-v1";
     const userSessionKey="nursing-performance-user-v1";
     const defaultUsers=()=>[
@@ -569,15 +601,22 @@
         const t=budgetTotals(p.id,null);
         return {allocated:sum.allocated+t.allocated,expense:sum.expense+t.expense};
       },{allocated:0,expense:0});
+      const approved=state.enrollments.filter(e=>e.approved);
+      const kalsBls=approved.filter(e=>[3,4].includes(e.category)).length;
+      const kalsBlsRate=approved.length?((kalsBls/approved.length)*100).toFixed(1):"산정 불가";
+      const known=analysisRecords.filter(record=>record.outcome!=="unknown");
+      const employed=known.filter(record=>!["unemployed","unknown"].includes(record.outcome));
+      const employmentRate=known.length?((employed.length/known.length)*100).toFixed(1):"산정 불가";
+      const tertiaryShare=employed.length?((employed.filter(record=>record.outcome==="tertiary").length/employed.length)*100).toFixed(1):"산정 불가";
       const budgetRate=totals.allocated?totals.expense/totals.allocated*100:null;
       const overBudget=totals.expense>totals.allocated;
       const cards=[
-        ["운영 중인 비교과",state.programs.length,"개","● 운영 중","7개 과목군 · 데모 모집 목록",""],
+        ["운영 중인 비교과",state.programs.length,"개",state.programs.length?"● 운영 중":"◷ 등록 전",state.programs.length?"등록된 프로그램 기준 집계":"등록된 프로그램이 없습니다.",state.programs.length?"":"warn"],
         ["예산 집행률",budgetRate===null?"산정 불가":budgetRate.toFixed(1),budgetRate===null?"":"%",overBudget?"! 예산 초과":totals.allocated?"● 집행 현황":"◷ 예산 미배정",`전체 회차 · 지출 ${fmt(totals.expense)}원 / 예산 ${fmt(totals.allocated)}원 · 등록 자료 기준`,overBudget?"bad":totals.allocated?"":"warn"],
-        ["총 이수 인원",1240,"명","✓ 목표 달성","집계 예시 · 중복 이수 제외",""],
-        ["KALS / BLS 취득률","94.2","%","✓ 목표 달성","목표 90% · 예시 통계",""],
-        ["졸업생 종합 취업률","88.5","%","◷ 목표 진행 중","25.08 / 26.02 · 목표 90%","warn"],
-        ["상급종합병원 취업 비중","46.8","%","! 목표 미달","예시 통계 · 목표 50%","bad"]
+        ["총 이수 인원",approved.length,"명",approved.length?"● 집계 완료":"◷ 집계 전","승인 완료 이수 건 기준",""],
+        ["KALS / BLS 취득률",kalsBlsRate,kalsBlsRate==="산정 불가"?"":"%",kalsBlsRate==="산정 불가"?"◷ 집계 전":"● 집계 완료","승인 이수 내역 기준",kalsBlsRate==="산정 불가"?"warn":""],
+        ["졸업생 종합 취업률",employmentRate,employmentRate==="산정 불가"?"":"%",employmentRate==="산정 불가"?"◷ 집계 전":"● 집계 완료","취업 현황 데이터 연동 기준",employmentRate==="산정 불가"?"warn":""],
+        ["상급종합병원 취업 비중",tertiaryShare,tertiaryShare==="산정 불가"?"":"%",tertiaryShare==="산정 불가"?"◷ 집계 전":"● 집계 완료","취업 데이터 연동 기준",tertiaryShare==="산정 불가"?"warn":""]
       ];
       $("kpis").innerHTML=cards.map(c=>`<div class="kpi"><div class="kpi-top"><span>${c[0]}</span><span class="kpi-icon" aria-hidden="true">↗</span></div><div class="kpi-value">${typeof c[1]==="number"?fmt(c[1]):c[1]}<small>${c[2]}</small></div><span class="badge ${c[5]}">${c[3]}</span><div class="kpi-foot">${c[4]}</div></div>`).join("");
     }
@@ -590,6 +629,12 @@
     // 코호트별 취업 분포 히트맵 렌더링
     function renderHeatmap(){
       const cohort=cohorts[$("cohort").value], totals=cohort.rows.map(r=>r.counts.reduce((a,b)=>a+b,0));
+      if(!cohort.rows.length){
+        $("heatmap").innerHTML='<p class="empty">연동된 취업/비교과 데이터가 없어 분포를 표시할 수 없습니다.</p>';
+        $("comparison").innerHTML='';
+        $("insight").hidden=true;
+        return;
+      }
       $("heatmap").innerHTML=`<div class="table-wrap"><table class="heatmap"><caption class="visually-hidden">${cohort.label} 졸업 코호트별 예시 취업 분포. 각 행의 비율 합계는 100%입니다.</caption><thead><tr><th scope="col">조합 이수 그룹</th><th scope="col">상급종합<br>병원</th><th scope="col">종합병원</th><th scope="col">기타 취업</th><th scope="col">미취업</th></tr></thead><tbody>${cohort.rows.map((row,i)=>`<tr><th scope="row">${row.label}<br><span class="muted">n=${totals[i]}</span></th>${row.counts.map(count=>{const pct=count/totals[i]*100;return `<td style="background:hsl(164 36% ${97-pct*.7}%);color:${pct>=55?"white":"#244c48"}">${pct.toFixed(0)}%<small>${count}명</small></td>`;}).join("")}</tr>`).join("")}</tbody></table></div><div class="heat-scale">취업 비율 낮음 <span aria-hidden="true"></span> 높음 · 숫자 병기</div>`;
       const a=cohort.rows[0].counts[0]/totals[0]*100,b=cohort.rows[3].counts[0]/totals[3]*100;
       $("insight").innerHTML=`<strong>✧ DATA INSIGHT · ${cohort.label} 졸업자</strong>KALS + 근접오류 이수 그룹의 상급종합병원 취업 비율은 ${a.toFixed(0)}%로, 미이수 그룹 ${b.toFixed(0)}%보다 <strong style="display:inline">${(a-b).toFixed(0)}%p 높습니다.</strong><p>가상 집계의 단순 비교이며 인과관계·통계적 유의성을 의미하지 않습니다. 조합 그룹 간 중복 가능성이 있어 합산할 수 없습니다.</p>`;
@@ -660,8 +705,14 @@
       const p=state.programs.find(p=>p.id===managedProgramId),list=state.enrollments.filter(e=>e.programId===p.id);
       const approved=list.filter(e=>e.enrollmentStatus==="approved").length;
       const waiting=waitlisted(p).length,regular=list.length-waiting;
-      $("programDetails").innerHTML=`<h3>${esc(p.name)}</h3><p class="muted">${esc(p.date)} · ${categories[p.category]} · 수강 ${p.occupied}/${p.capacity}명 · 대기 ${waiting}/${p.waitCapacity}명 · 교육비 ${fmt(p.price)}원</p><div class="course-summary" style="margin-bottom:20px"><div><strong>${regular-approved}</strong><small>수강 승인 대기</small></div><div><strong>${approved}</strong><small>수강 승인 완료</small></div><div><strong>${waiting}</strong><small>정원 외 대기</small></div></div>${p.occupied>regular?`<p class="notice" style="margin-bottom:15px">기존 예시 인원 ${p.occupied-regular}명은 개별 신청 정보가 없는 집계입니다. 아래 명단은 이 브라우저에 저장된 신청 기록만 표시합니다.</p>`:""}${waiting?'<p class="notice" style="margin-bottom:15px">정원 외 대기는 수강 승인 대기와 다릅니다. 결제·수강·이수 대상이 아니며, 현재 버전은 대기 명단 접수까지만 지원합니다. 취소·정원 변경·대기자 승격은 제공하지 않습니다.</p>':""}`;
-      $("applicants").innerHTML=list.length?`<p class="muted" style="margin-bottom:10px">이수 완료 ${list.filter(e=>e.approved).length}명 / 수강 신청 ${regular}명 / 정원 외 대기 ${waiting}명</p><div class="table-wrap"><table><caption class="visually-hidden">${esc(p.name)} 신청 학생 명단</caption><thead><tr>${["이름","학번","전화번호","이메일","수강 승인상태","출석 확인","이수상태 / 이수일","관리"].map(t=>`<th scope="col">${t}</th>`).join("")}</tr></thead><tbody>${list.map(e=>`<tr><td>${esc(e.student)}</td><td>${esc(e.studentNo||"미등록")}</td><td>${esc(e.phone||"미등록")}</td><td>${esc(e.email||"미등록")}</td><td><span class="badge ${e.enrollmentStatus!=="approved"?"warn":""}">${enrollmentLabel(e)}</span></td><td>${attendanceField(e)}</td><td>${e.approved?`<span class="badge">✓ 이수 완료</span><br><span class="muted">${esc(e.date)}</span>`:'<span class="badge warn">미이수</span>'}</td><td>${e.enrollmentStatus==="waitlisted"?'<span class="muted">대기 접수 · 결제 없음</span>':e.enrollmentStatus==="pending"?`<button data-admit="${esc(e.id)}">수강 승인</button>`:e.approved?`<button data-cancel-completion="${esc(e.id)}">이수 취소</button>`:`<button class="teal" data-approve="${esc(e.id)}">이수 처리</button>`}</td></tr>`).join("")}</tbody></table></div>`:'<p class="empty">이 교육에 신청한 학생이 없습니다.</p>';
+      const survey=p.surveyForm&&typeof p.surveyForm==="object"?p.surveyForm:null;
+      const surveyTypeLabel={pre:"사전",post:"사후",both:"사전·사후"}[survey?.type]||"미설정";
+      const surveyQuestions=Array.isArray(survey?.questions)?survey.questions:[];
+      const surveyPreview=surveyQuestions.length
+        ? `<div class="survey-preview"><strong>저장된 설문: ${esc(survey?.title||"만족도 조사")}</strong><p class="muted">유형: ${surveyTypeLabel}${survey?.updatedAt?` · 수정 ${esc(new Date(survey.updatedAt).toLocaleString("ko-KR"))}`:""}</p>${survey?.googleFormUrl?`<p class="muted" style="margin-top:6px">Google Form: <a href="${esc(survey.googleFormUrl)}" target="_blank" rel="noopener noreferrer">링크 열기</a></p>`:""}<ol>${surveyQuestions.map(question=>`<li>${esc(question)}</li>`).join("")}</ol></div>`
+        : '<p class="muted" style="margin-top:10px">아직 저장된 만족도조사 폼이 없습니다.</p>';
+      $("programDetails").innerHTML=`<h3>${esc(p.name)}</h3><p class="muted">${esc(p.date)} · ${categories[p.category]} · 수강 ${p.occupied}/${p.capacity}명 · 대기 ${waiting}/${p.waitCapacity}명 · 교육비 ${fmt(p.price)}원</p><div class="course-summary" style="margin-bottom:20px"><div><strong>${regular-approved}</strong><small>수강 승인 대기</small></div><div><strong>${approved}</strong><small>수강 승인 완료</small></div><div><strong>${waiting}</strong><small>정원 외 대기</small></div></div>${p.occupied>regular?`<p class="notice" style="margin-bottom:15px">기존 예시 인원 ${p.occupied-regular}명은 개별 신청 정보가 없는 집계입니다. 아래 명단은 이 브라우저에 저장된 신청 기록만 표시합니다.</p>`:""}${waiting?'<p class="notice" style="margin-bottom:15px">정원 외 대기는 수강 승인 대기와 다릅니다. 결제·수강·이수 대상이 아니며, 현재 버전은 대기 명단 접수까지만 지원합니다. 취소·정원 변경·대기자 승격은 제공하지 않습니다.</p>':""}<section class="survey-builder"><h4>만족도조사 폼 관리</h4><form id="programSurveyForm"><div class="field-row"><label class="field">폼 제목<input id="programSurveyTitle" maxlength="80" value="${esc(survey?.title||`${p.name} 만족도 조사`)}" required></label><label class="field">조사 유형<select id="programSurveyType"><option value="pre" ${survey?.type==="pre"?"selected":""}>사전</option><option value="post" ${(!survey||survey?.type==="post")?"selected":""}>사후</option><option value="both" ${survey?.type==="both"?"selected":""}>사전·사후</option></select></label></div><label class="field">Google Form URL (선택)<input id="programSurveyGoogleFormUrl" maxlength="500" placeholder="https://docs.google.com/forms/... 또는 https://forms.gle/..." value="${esc(survey?.googleFormUrl||"")}"></label><label class="field">문항 목록 (한 줄에 한 문항)<textarea id="programSurveyQuestions" maxlength="2000" placeholder="예: 교육 내용이 임상 실무에 도움이 되었다.">${esc(surveyQuestions.length?surveyQuestions.join("\n"):"교육 내용이 이해하기 쉬웠다.\n강사의 설명이 명확했다.\n본 과정을 동료에게 추천하고 싶다.")}</textarea></label><div class="actions"><button type="submit" class="teal">만족도조사 폼 저장</button><button type="button" data-clear-survey-form="${esc(p.id)}">폼 초기화</button></div><p class="muted">저장된 설문은 현재 데모 로컬 데이터에 보관됩니다. 실제 배포/응답 수집 기능은 서버 연동이 필요합니다.</p></form>${surveyPreview}</section>`;
+      $("applicants").innerHTML=list.length?`<p class="muted" style="margin-bottom:10px">이수 완료 ${list.filter(e=>e.approved).length}명 / 수강 신청 ${regular}명 / 정원 외 대기 ${waiting}명</p><div class="table-wrap"><table><caption class="visually-hidden">${esc(p.name)} 신청 학생 명단</caption><thead><tr>${["이름","학번","전화번호","이메일","수강 승인상태","출석 확인","이수상태 / 이수일","관리"].map(t=>`<th scope="col">${t}</th>`).join("")}</tr></thead><tbody>${list.map(e=>`<tr><td>${esc(e.student)}</td><td>${esc(e.studentNo||"미등록")}</td><td>${esc(e.phone||"미등록")}</td><td>${esc(e.email||"미등록")}</td><td><span class="badge ${e.enrollmentStatus!=="approved"?"warn":""}">${enrollmentLabel(e)}</span></td><td>${attendanceField(e)}</td><td>${e.approved?`<span class="badge">✓ 이수 완료</span><br><span class="muted">${esc(e.date)}</span>`:'<span class="badge warn">미이수</span>'}</td><td>${e.enrollmentStatus==="waitlisted"?'<span class="muted">대기 접수 · 결제 없음</span>':e.enrollmentStatus==="pending"?`<button data-admit="${esc(e.id)}">수강 승인</button>`:e.approved?`<button data-cancel-completion="${esc(e.id)}">이수 취소</button>`:`<button class="teal" data-approve="${esc(e.id)}">이수 처리</button>`}<br><button data-delete-enrollment="${esc(e.id)}">학생 삭제</button></td></tr>`).join("")}</tbody></table></div>`:'<p class="empty">이 교육에 신청한 학생이 없습니다.</p>';
       const count=completionCandidates(p.id).length;
       const eligible=attendanceCandidates(),eligibleIds=new Set(eligible.map(e=>e.id));
       selectedApplicants.forEach(id=>{if(!eligibleIds.has(id))selectedApplicants.delete(id);});
@@ -673,8 +724,37 @@
           row.insertAdjacentHTML("afterbegin",`<td><input type="checkbox" data-select-applicant="${esc(e.id)}" aria-label="${esc(e.student)} ${esc(e.studentNo||"학번 미등록")} 행 선택" ${canMarkAttendance(e)?"":"disabled"}></td>`);
         });
       }
-      $("programDetails").insertAdjacentHTML("beforeend",`<div class="actions" style="margin-bottom:16px"><button data-mark-attendance="all" ${eligible.some(e=>e.attendance<80)?"":"disabled"}>전체 출석 처리</button><button id="markSelectedAttendance" data-mark-attendance="selected" disabled>선택 학생 출석 처리 (0명)</button><button class="teal" data-bulk-complete="${esc(p.id)}" ${count===0?"disabled":""}>출석자 일괄 이수 처리 (${count}명)</button><span class="muted">출석 처리는 현재 교육의 수강 승인된 미이수 학생만 대상입니다. 이수 처리는 별도로 진행하세요.</span></div>`);
+      $("programDetails").insertAdjacentHTML("beforeend",`<div class="actions" style="margin-bottom:16px"><button data-mark-attendance="all" ${eligible.some(e=>e.attendance<80)?"":"disabled"}>전체 출석 처리</button><button id="markSelectedAttendance" data-mark-attendance="selected" disabled>선택 학생 출석 처리 (0명)</button><button class="teal" data-bulk-complete="${esc(p.id)}" ${count===0?"disabled":""}>출석자 일괄 이수 처리 (${count}명)</button><button data-cancel-program="${esc(p.id)}">교육 개설 취소</button><span class="muted">출석 처리는 현재 교육의 수강 승인된 미이수 학생만 대상입니다. 이수 처리는 별도로 진행하세요.</span></div>`);
       syncApplicantSelection();
+      simplifySurveyManagerUi();
+    }
+    function simplifySurveyManagerUi(){
+      const form=$("programSurveyForm");
+      if(!form)return;
+      const titleLabel=$("programSurveyTitle")?.closest("label");
+      const typeLabel=$("programSurveyType")?.closest("label");
+      const questionsLabel=$("programSurveyQuestions")?.closest("label");
+      if(titleLabel)titleLabel.remove();
+      if(typeLabel)typeLabel.remove();
+      if(questionsLabel)questionsLabel.remove();
+      const row=form.querySelector(".field-row");
+      if(row && !row.children.length)row.remove();
+      const urlInput=$("programSurveyGoogleFormUrl");
+      if(urlInput){
+        urlInput.required=true;
+        urlInput.placeholder="https://docs.google.com/forms/... 또는 https://forms.gle/...";
+      }
+      const note=form.querySelector("p.muted");
+      if(note)note.textContent="이 관리 폼은 Google Form 링크만 저장합니다. 학생 화면에서 저장된 링크를 바로 열 수 있습니다.";
+    }
+    function removeEnrollmentById(enrollmentId){
+      const index=state.enrollments.findIndex(entry=>entry.id===enrollmentId);
+      if(index<0)return null;
+      const entry=state.enrollments[index];
+      const program=state.programs.find(p=>p.id===entry.programId);
+      if(program&&entry.enrollmentStatus!=="waitlisted"&&program.occupied>0)program.occupied--;
+      state.enrollments.splice(index,1);
+      return entry;
     }
     // 행정 탭(수강/이수/CQI) 렌더링
     function renderOperations(){
@@ -748,6 +828,130 @@
       return {scores,average,details,strongest,weakest,journalCount:journals.length+practiceFiles.length,completedCount:done.length,portfolioFilled:filledCount};
     }
     const competency=()=>competencyAnalysis().scores;
+    const careerRoadmapOptions=[
+      {value:"tertiary",label:"상급종합병원 임상간호사"},
+      {value:"public",label:"보건직 공무원"},
+      {value:"cra",label:"제약회사 CRA"},
+      {value:"officer",label:"간호장교"}
+    ];
+    function roadmapItem(name,category,categoryTag,required,hours,keywords,mandatory){
+      return {name,category,categoryTag,required,hours,keywords,mandatory:Boolean(mandatory)};
+    }
+    function roadmapTemplate(threeOne,threeSummer,threeTwo,threeWinter,fourOne,fourSummer,fourTwo){
+      return {
+        foundation:[
+          roadmapItem("BLS 기초 워크숍",4,"자격/실무",true,12,["BLS","기초"],false),
+          roadmapItem("임상 의학용어 부트캠프",6,"학술/연구",true,16,["의학용어","TERM"],false),
+          roadmapItem("감염관리 단독과정",1,"자격/실무",false,8,["감염관리"],false)
+        ],
+        terms:[
+          {id:"3-1",title:"3학년 1학기",items:threeOne},
+          {id:"3-summer",title:"3학년 여름방학",items:threeSummer},
+          {id:"3-2",title:"3학년 2학기",items:threeTwo},
+          {id:"3-winter",title:"3학년 2학기 겨울방학",items:threeWinter},
+          {id:"4-1",title:"4학년 1학기",items:fourOne},
+          {id:"4-summer",title:"4학년 여름방학",items:fourSummer},
+          {id:"4-2",title:"4학년 2학기",items:fourTwo}
+        ]
+      };
+    }
+    const roadmapSummerPrograms=[
+      roadmapItem("(환자안전) 투약의 모든 것(기초) · 3,4학년 대상",0,"자격/실무",true,12,["투약","기초"],false),
+      roadmapItem("(환자안전) 투약의 모든 것(심화) · 4학년 대상(기초과정 이수자)",0,"자격/실무",false,14,["투약","심화"],false),
+      roadmapItem("(환자안전) 근접오류 관리 · 3,4학년 대상",2,"학술/연구",true,10,["근접오류","오류"],false),
+      roadmapItem("(환자안전) 감염관리 · 3,4학년 대상",1,"자격/실무",true,8,["감염관리","감염"],false)
+    ];
+    const roadmapWinterPrograms=[
+      roadmapItem("(환자안전) BLS provider · 3학년 대상 (졸업인증)",4,"자격/실무",true,16,["BLS","Provider"],true),
+      roadmapItem("(환자안전) KALS Provider · 3학년 대상",3,"자격/실무",true,20,["KALS","Provider"],false)
+    ];
+    const cloneRoadmapItems=items=>items.map(item=>({...item,keywords:[...item.keywords]}));
+    const careerRoadmapTemplates={
+      tertiary:roadmapTemplate(
+        [roadmapItem("임상 의사소통 · SBAR",5,"리더십/인성",true,10,["SBAR","의사소통"],false),roadmapItem("임상판단 케이스 리뷰",2,"학술/연구",true,12,["케이스","판단"],false)],
+        cloneRoadmapItems(roadmapSummerPrograms),
+        [roadmapItem("근접오류 사례 분석",2,"학술/연구",true,10,["근접오류"],false),roadmapItem("취업 포트폴리오 클리닉",5,"취업/면접",false,8,["포트폴리오"],false)],
+        cloneRoadmapItems(roadmapWinterPrograms),
+        [roadmapItem("중환자 케어 준비반",3,"자격/실무",true,14,["중환자"],false),roadmapItem("임상연구 데이터 리딩",6,"학술/연구",false,8,["데이터"],false)],
+        cloneRoadmapItems(roadmapSummerPrograms),
+        [roadmapItem("면접 대비 임상 시나리오",5,"취업/면접",true,10,["면접"],false),roadmapItem("프리셉터 연계 실습 세미나",0,"리더십/인성",false,8,["프리셉터"],false)]
+      ),
+      public:roadmapTemplate(
+        [roadmapItem("지역사회 건강문제 분석",2,"학술/연구",true,12,["지역사회"],false),roadmapItem("보건직 기초법규 세미나",6,"학술/연구",true,8,["법규"],false)],
+        cloneRoadmapItems(roadmapSummerPrograms),
+        [roadmapItem("보건통계 실습",6,"학술/연구",true,10,["통계"],false),roadmapItem("공직 면접 스피치",5,"취업/면접",false,8,["면접"],false)],
+        cloneRoadmapItems(roadmapWinterPrograms),
+        [roadmapItem("보건소 실무 멘토링",5,"리더십/인성",true,12,["멘토링"],false),roadmapItem("감염관리 단독과정",1,"자격/실무",false,8,["감염관리"],false)],
+        cloneRoadmapItems(roadmapSummerPrograms),
+        [roadmapItem("보건직 면접 대비",5,"취업/면접",true,8,["면접"],false),roadmapItem("지역사회 프로젝트 발표",2,"학술/연구",false,8,["발표"],false)]
+      ),
+      cra:roadmapTemplate(
+        [roadmapItem("임상연구 윤리 입문",1,"학술/연구",true,10,["윤리"],false),roadmapItem("의학논문 리딩 세션",6,"학술/연구",true,8,["논문"],false)],
+        cloneRoadmapItems(roadmapSummerPrograms),
+        [roadmapItem("근접오류 사례 분석",2,"학술/연구",true,10,["근접오류"],false),roadmapItem("임상 의사소통 · SBAR",5,"리더십/인성",false,8,["SBAR"],false)],
+        cloneRoadmapItems(roadmapWinterPrograms),
+        [roadmapItem("모니터링 리포트 작성",6,"학술/연구",true,12,["리포트"],false),roadmapItem("감염관리 단독과정",1,"자격/실무",false,8,["감염관리"],false)],
+        cloneRoadmapItems(roadmapSummerPrograms),
+        [roadmapItem("CRA 채용 대비 프로젝트",2,"취업/면접",true,12,["채용"],false),roadmapItem("영문 커뮤니케이션 클리닉",5,"리더십/인성",false,6,["영문"],false)]
+      ),
+      officer:roadmapTemplate(
+        [roadmapItem("리더십 커뮤니케이션",5,"리더십/인성",true,10,["리더십"],false),roadmapItem("군진 간호 의사결정 훈련",2,"리더십/인성",true,12,["군진","의사결정"],false)],
+        cloneRoadmapItems(roadmapSummerPrograms),
+        [roadmapItem("군진 간호 케이스 토론",2,"학술/연구",true,10,["케이스"],false),roadmapItem("임상 의사소통 · SBAR",5,"리더십/인성",false,8,["SBAR"],false)],
+        cloneRoadmapItems(roadmapWinterPrograms),
+        [roadmapItem("장교 진로 모의평가",5,"취업/면접",true,10,["진로"],false),roadmapItem("감염관리 융합 실습",1,"자격/실무",false,8,["감염"],false)],
+        cloneRoadmapItems(roadmapSummerPrograms),
+        [roadmapItem("간호장교 최종 면접 대비",5,"취업/면접",true,8,["면접"],false),roadmapItem("종합 시뮬레이션",3,"자격/실무",false,10,["종합"],false)]
+      )
+    };
+    function roadmapStatus(item,enrollments){
+      const matched=enrollments.filter(e=>e.category===item.category&&item.keywords.some(keyword=>e.name.includes(keyword)));
+      if(matched.some(e=>e.approved))return "done";
+      if(matched.some(e=>e.enrollmentStatus==="approved"||e.enrollmentStatus==="pending"))return "progress";
+      return "open";
+    }
+    function roadmapProgramLink(item){
+      const candidate=state.programs.find(p=>p.category===item.category&&item.keywords.some(keyword=>p.name.includes(keyword)));
+      return candidate?candidate.id:null;
+    }
+    function openRoadmapTermDialog(termId,enrollments){
+      const template=careerRoadmapTemplates[roadmapCareer]||careerRoadmapTemplates.tertiary;
+      const term=template.terms.find(entry=>entry.id===termId);
+      if(!term)return;
+      $("roadmapDetailDialogTitle").textContent=`${term.title} 상세 프로그램`;
+      $("roadmapDetailSummary").textContent="과정별 필요 시간과 신청 경로를 확인하세요.";
+      $("roadmapDetailBody").innerHTML=term.items.map(item=>{
+        const status=roadmapStatus(item,enrollments);
+        const statusLabel=status==="done"?"이수 완료":status==="progress"?"진행 중":item.mandatory?"신청 예정":"신청 가능";
+        return `<article class="roadmap-card ${status}"><div class="roadmap-top"><h4>${esc(item.name)}</h4><span class="roadmap-status ${status}">${statusLabel}</span></div><div class="roadmap-meta"><span class="roadmap-pill">${item.categoryTag}</span><span class="roadmap-pill ${item.required?"required":""}">${item.required?"필수":"선택"}</span><span class="roadmap-pill">필요 시간 ${item.hours}h</span></div>${item.mandatory?'<div class="roadmap-mandatory">[졸업인증 필수]</div>':""}</article>`;
+      }).join("");
+      $("roadmapDetailDialog").showModal();
+    }
+    function renderCareerRoadmap(enrollments){
+      if(!$("careerTarget"))return;
+      const options=careerRoadmapOptions.map(option=>`<option value="${option.value}">${option.label}</option>`).join("");
+      if($("careerTarget").innerHTML!==options)$("careerTarget").innerHTML=options;
+      if(!careerRoadmapTemplates[roadmapCareer])roadmapCareer="tertiary";
+      $("careerTarget").value=roadmapCareer;
+      const template=careerRoadmapTemplates[roadmapCareer];
+      const visibleTermIds=new Set(["3-summer","3-winter","4-summer"]);
+      const visibleTerms=template.terms.filter(term=>visibleTermIds.has(term.id));
+      const focusItems=visibleTerms.flatMap(term=>term.items);
+      const requiredItems=focusItems.filter(item=>item.required);
+      const doneRequired=requiredItems.filter(item=>roadmapStatus(item,enrollments)==="done").length;
+      const progress=requiredItems.length?Math.round(doneRequired/requiredItems.length*100):0;
+      $("roadmapProgressText").textContent=`3·4학년 비교과 이수율 ${progress}%`;
+      $("roadmapProgressMeta").textContent=`필수 ${doneRequired}/${requiredItems.length}`;
+      $("roadmapProgressBar").style.width=`${progress}%`;
+      const foundationDone=template.foundation.filter(item=>roadmapStatus(item,enrollments)==="done").length;
+      $("roadmapFoundation").innerHTML=`<div class="roadmap-foundation-head"><strong>기초 역량 형성기 (1~2학년) · 완료 ${foundationDone}/${template.foundation.length}</strong><button type="button" data-roadmap-foundation-toggle>${roadmapFoundationExpanded?"접기":"펼쳐보기"}</button></div>${roadmapFoundationExpanded?`<div class="roadmap-foundation-detail">${template.foundation.map(item=>`${item.name} (${item.categoryTag})`).join(" · ")}</div>`:""}`;
+      $("careerRoadmapTimeline").innerHTML=visibleTerms.map(term=>{
+        const doneCount=term.items.filter(item=>roadmapStatus(item,enrollments)==="done").length;
+        const progressCount=term.items.filter(item=>roadmapStatus(item,enrollments)==="progress").length;
+        const openCount=term.items.filter(item=>roadmapStatus(item,enrollments)==="open").length;
+        return `<article class="roadmap-term"><button type="button" class="roadmap-term-head" data-roadmap-term-open="${term.id}"><div><strong>${term.title}</strong><small>이수 ${doneCount} · 진행 ${progressCount} · 신청 ${openCount}</small></div><span aria-hidden="true">↗</span></button><div class="roadmap-term-body">${term.items.map(item=>{const status=roadmapStatus(item,enrollments);const statusLabel=status==="done"?"이수 완료":status==="progress"?"진행 중":item.mandatory?"신청 예정":"신청 가능";return `<article class="roadmap-card ${status}"><div class="roadmap-top"><h4>${esc(item.name)}</h4><span class="roadmap-status ${status}">${statusLabel}</span></div><div class="roadmap-meta"><span class="roadmap-pill">${item.categoryTag}</span><span class="roadmap-pill ${item.required?"required":""}">${item.required?"필수":"선택"}</span></div>${item.mandatory?'<div class="roadmap-mandatory">[졸업인증 필수]</div>':""}</article>`;}).join("")}</div></article>`;
+      }).join("");
+    }
     // 학생 모드 화면(역량/신청/이수/일지) 렌더링
     function renderStudent(){
       const done=completed(),enrollments=mine(),analysis=competencyAnalysis(),scores=analysis.scores;
@@ -755,13 +959,12 @@
       $("studentSummary").innerHTML=`<div><strong>${done.length}</strong><small>이수 과정</small></div><div><strong>${done.length*10}</strong><small>데모 마일리지</small></div><div><strong>${analysis.average}</strong><small>평균 역량</small></div>`;
       $("competencyInsightSummary").innerHTML=`<div class="course-summary"><div><strong>${analysis.completedCount}</strong><small>연결된 이수 기록</small></div><div><strong>${analysis.journalCount}</strong><small>분석한 일지/업로드</small></div><div><strong>${analysis.portfolioFilled}/4</strong><small>STAR 작성도</small></div></div><p class="muted" style="margin-top:10px">AI 코치 요약: 현재 강점은 ${analysis.strongest}이며, 우선 보완이 필요한 영역은 ${analysis.weakest}입니다.</p>`;
       $("competencyInsightCards").innerHTML=`<div class="table-wrap"><table><caption class="visually-hidden">6대 핵심역량 상세 해석</caption><thead><tr><th scope="col">핵심역량</th><th scope="col">지표</th><th scope="col">해석</th><th scope="col">분석 근거</th><th scope="col">권장 액션</th></tr></thead><tbody>${analysis.details.map(item=>`<tr><th scope="row">${item.label}</th><td><strong>${item.score}</strong>점<br><span class="badge ${item.level==="강점"?"":"warn"}">${item.level}</span></td><td>${item.summary}</td><td>${item.evidence}</td><td>${item.recommendation}</td></tr>`).join("")}</tbody></table></div>`;
-      const roadmap=[[6],[4,0],[3,1,2],[5,0]];
-      $("timeline").innerHTML=roadmap.map((cats,i)=>`<li><strong>${i+1}학년 ${i===2?'<span class="badge warn">현재 학년</span>':""}</strong>${cats.map(cat=>{const matches=e=>e.category===cat&&(cat!==0||e.name.includes(i===3?"심화":"기초")),ok=done.some(matches),ongoing=enrollments.some(e=>matches(e)&&!e.approved&&e.enrollmentStatus==="approved"),waiting=enrollments.some(e=>matches(e)&&e.enrollmentStatus==="pending");return `<small>${ok?"✓ 완료":ongoing?"◷ 진행 중":waiting?"◷ 수강 승인 대기":"○ 권장 미이수"} · ${categories[cat]}${cat===0?(i===3?" 심화":" 기초"):""}</small>`;}).join("")}</li>`).join("");
+      renderCareerRoadmap(enrollments);
       $("courseCards").innerHTML=state.programs.map(p=>{
         const application=enrollments.find(e=>e.programId===p.id),enrolled=Boolean(application),type=availableApplication(p);
         return `<article class="course-card"><div class="course-art"><span>${["Rx","IPC","RCA","KALS","BLS","SBAR","TERM"][p.category]}</span><span aria-hidden="true">＋</span></div><div class="course-body"><span class="badge ${type!=="pending"?"warn":""}">${enrolled?enrollmentLabel(application):type==="waitlisted"?"대기 모집중":!type?"접수 마감":"데모 모집중"}</span><h3>${esc(p.name)}</h3><p class="muted">${esc(p.date)} · ${p.target==="nursing"?"간호학과 대상":"전체 학과"}</p><p class="muted">수강 ${p.occupied}/${p.capacity}명 · 대기 ${waitlisted(p).length}/${p.waitCapacity}명</p><div class="actions"><strong>${p.price?fmt(p.price)+"원":"무료"}</strong><button class="teal" data-enroll="${esc(p.id)}" ${enrolled||!type?"disabled":""}>${enrolled?"신청 완료":type==="waitlisted"?"대기 신청":!type?"접수 마감":"신청하기"}</button></div></div></article>`;
       }).join("");
-      $("completions").innerHTML=`<div class="table-wrap"><table><caption class="visually-hidden">나의 수강 및 이수 내역</caption><thead><tr><th scope="col">과정명</th><th scope="col">이수일 / 상태</th><th scope="col">마일리지</th><th scope="col">증빙</th></tr></thead><tbody>${enrollments.map(e=>`<tr><td>${esc(e.name)}</td><td>${e.approved?esc(e.date):`<span class="badge warn">${e.enrollmentStatus!=="approved"?enrollmentLabel(e):"수강 승인 · 출석 / 이수 승인 대기"}</span>`}</td><td>${e.approved?10:0}점</td><td>${e.approved?`<button data-certificate="${esc(e.id)}">데모 확인서</button>`:"—"}</td></tr>`).join("")}</tbody></table></div>`;
+      $("completions").innerHTML=`<div class="table-wrap"><table><caption class="visually-hidden">나의 수강 및 이수 내역</caption><thead><tr><th scope="col">과정명</th><th scope="col">이수일 / 상태</th><th scope="col">마일리지</th><th scope="col">증빙</th><th scope="col">만족도 조사</th><th scope="col">수강 신청</th></tr></thead><tbody>${enrollments.map(e=>{const program=state.programs.find(p=>p.id===e.programId);const formUrl=program?.surveyForm?.googleFormUrl||"";const hasSurveyLink=/^https:\/\/(docs\.google\.com\/forms\/|forms\.gle\/)/i.test(formUrl);const surveyDone=e.surveyDone===true;const surveyOpened=Boolean(e.surveyOpenedAt);const certificateCell=!e.approved?"—":!hasSurveyLink?`<span class="badge warn">설문 링크 미등록</span>`:!surveyDone?`<span class="badge warn">설문 완료 필요</span>${surveyOpened?`<br><button data-mark-survey-done="${esc(e.id)}">설문 완료 확인</button>`:"<br><small class=\"muted\">먼저 구글폼을 열어주세요.</small>"}`:`<button data-certificate="${esc(e.id)}">데모 확인서</button>`;const surveyCell=!e.approved?"—":!hasSurveyLink?`<span class="badge warn">관리자 링크 필요</span>`:`<button data-open-survey="${esc(e.id)}">구글폼 열기</button>${surveyDone?'<br><span class="badge">완료 확인</span>':''}`;const cancelCell=!e.approved?`<button data-cancel-enrollment="${esc(e.id)}">신청 취소</button>`:"—";return `<tr><td>${esc(e.name)}</td><td>${e.approved?esc(e.date):`<span class="badge warn">${e.enrollmentStatus!=="approved"?enrollmentLabel(e):"수강 승인 · 출석 / 이수 승인 대기"}</span>`}</td><td>${e.approved?10:0}점</td><td>${certificateCell}</td><td>${surveyCell}</td><td>${cancelCell}</td></tr>`;}).join("")}</tbody></table></div>`;
       renderJournals();
     }
     // 실습 성장일지 목록 렌더링
@@ -1130,6 +1333,11 @@
         html=`<div class="eyebrow">MY NURSING CAREER PORTFOLIO</div><h1>간호 직무 역량 포트폴리오</h1><p class="report-meta">${esc(studentName)} (학생 계정) · ${esc(p.hospital)} 지원 준비 · ${esc($("portfolioTheme").selectedOptions[0].textContent)} · ${esc(stamp)}</p><h2>1. 핵심역량 프로필</h2>${radar(["환자안전","응급간호","의사소통","감염관리","임상술기","직무전문성"],competency(),[80,80,80,80,80,80],"참고 역량 점수")}<p class="report-meta">로컬 데모 가중치 점수이며 공식 역량 인증이 아닙니다.</p><h2>2. STAR 경험 기술</h2>${[["S · Situation",p.s],["T · Task",p.t],["A · Action",p.a],["R · Result",p.r]].map(r=>`<h3>${r[0]}</h3><p>${esc(r[1])}</p>`).join("")}<h2>3. 이수 증빙 목록</h2><table class="report-table"><thead><tr><th>과정</th><th>이수일</th><th>출석률</th></tr></thead><tbody>${completed().map(e=>`<tr><td>${esc(e.name)}</td><td>${esc(e.date)}</td><td>${e.attendance}%</td></tr>`).join("")}</tbody></table><h2>4. 실습 성장 기록 요약</h2>${journals.length?journals.map(j=>`<h3>${esc(j.date)} · ${esc(j.title)}</h3><p>${esc(j.body)}</p><p class="report-meta">${esc(j.tags)}</p>`).join(""):"<p>저장된 실습일지 없음</p>"}<p class="print-note">학생 계정별 로컬 저장 기록 기반 작성 연습용 문서입니다. 공식 증명서가 아니며, 실제 제출 전 모든 사실과 개인정보를 검토하세요. 원본 인증서 파일은 첨부되지 않습니다.</p>`;
       }else{
         const e=completed().find(e=>e.id===enrollmentId);if(!e){toast("승인된 이수 내역을 찾을 수 없습니다.");return;}
+        const program=state.programs.find(p=>p.id===e.programId);
+        const formUrl=program?.surveyForm?.googleFormUrl||"";
+        const surveyLinked=/^https:\/\/(docs\.google\.com\/forms\/|forms\.gle\/)/i.test(formUrl);
+        if(!surveyLinked){toast("만족도조사 링크가 등록되지 않아 이수증을 확인할 수 없습니다.");return;}
+        if(e.surveyDone!==true){toast("만족도조사를 완료 확인한 뒤 이수증을 확인할 수 있습니다.");return;}
         html=`<div class="eyebrow">NURSING+ · DEMO RECORD</div><h1>비교과 이수 확인서 (데모)</h1><p class="report-meta">출력 ${esc(stamp)}</p><h2>${esc(e.name)}</h2><p>성명: ${esc(e.student)}</p><p>학과: 간호학과</p><p>이수일: ${esc(e.date)}</p><p>출석률: ${e.attendance}%</p><p>데모 마일리지: 10점</p><p>로컬 기록 번호: ${esc(e.id)}</p><p class="print-note">공식 이수증이나 자격증이 아닙니다. 인증 서버가 연결되지 않아 위변조 방지 QR 및 제3자 진위 검증은 제공하지 않습니다. 병원 제출용으로 사용할 수 없습니다.</p>`;
       }
       $("printArea").innerHTML=html;window.print();
@@ -1272,6 +1480,7 @@
     $("courseFilter").addEventListener("change",renderCourse);
     $("cohort").addEventListener("change",renderHeatmap);
     $("insightToggle").addEventListener("change",renderHeatmap);
+    $("careerTarget").addEventListener("change",()=>{roadmapCareer=$("careerTarget").value;renderCareerRoadmap(mine());});
     $("roleSwitch").addEventListener("click",()=>{
       if(currentUser.role==="student"){toast("학생 계정은 관리자 화면으로 전환할 수 없습니다.");return;}
       setMode(!studentMode);
@@ -1400,6 +1609,15 @@
         if(target&&$(target))$(target).scrollIntoView({behavior:"smooth",block:"start"});
         return;
       }
+      if(button.dataset.roadmapFoundationToggle){
+        roadmapFoundationExpanded=!roadmapFoundationExpanded;
+        renderCareerRoadmap(mine());
+        return;
+      }
+      if(button.dataset.roadmapTermOpen){
+        openRoadmapTermDialog(button.dataset.roadmapTermOpen,mine());
+        return;
+      }
       if(button.dataset.tab){activeTab=button.dataset.tab;renderOperations();}
       if(button.dataset.analysisGroup){
         analysisSelectedGroup=button.dataset.analysisGroup;renderAnalytics();
@@ -1447,10 +1665,91 @@
         e.enrollmentStatus="approved";const saved=save();renderAll();if(saved)toast("수강 승인 완료 · 출석 확인 후 이수 승인을 진행하세요.");
       }
       if(button.dataset.report)printReport(button.dataset.report);
+      if(button.dataset.cancelProgram){
+        const p=state.programs.find(program=>program.id===button.dataset.cancelProgram);
+        if(!p){toast("취소할 교육을 찾을 수 없습니다.");return;}
+        const related=state.enrollments.filter(e=>e.programId===p.id).length;
+        if(!confirm(`'${p.name}' 교육 개설을 취소합니다. 신청 내역 ${related}건과 예산 회차가 함께 삭제됩니다.`))return;
+        state.enrollments=state.enrollments.filter(e=>e.programId!==p.id);
+        state.budgets=state.budgets.filter(b=>b.programId!==p.id);
+        state.programs=state.programs.filter(program=>program.id!==p.id);
+        if(managedProgramId===p.id)managedProgramId=state.programs[0]?.id||null;
+        if(budgetProgramId===p.id){
+          budgetProgramId=state.programs[0]?.id||null;
+          budgetSessionId=null;
+        }
+        const saved=save();
+        renderAll();
+        if(saved)toast("교육 개설을 취소했습니다.");
+        return;
+      }
+      if(button.dataset.deleteEnrollment){
+        const e=state.enrollments.find(entry=>entry.id===button.dataset.deleteEnrollment&&entry.programId===managedProgramId);
+        if(!e){toast("삭제할 학생 신청 내역을 찾을 수 없습니다.");return;}
+        if(!confirm(`${e.student} 학생의 신청 내역을 삭제합니다. 복구할 수 없습니다.`))return;
+        removeEnrollmentById(e.id);
+        const saved=save();
+        renderAll();
+        if(saved)toast("학생 신청 내역을 삭제했습니다.");
+        return;
+      }
+      if(button.dataset.cancelEnrollment){
+        const e=mine().find(entry=>entry.id===button.dataset.cancelEnrollment);
+        if(!e||e.approved){toast("취소할 수강 신청 내역을 찾을 수 없습니다.");return;}
+        if(!confirm(`'${e.name}' 수강 신청을 취소하시겠습니까?`))return;
+        removeEnrollmentById(e.id);
+        const saved=save();
+        renderAll();
+        if(saved)toast("수강 신청을 취소했습니다.");
+        return;
+      }
+      if(button.dataset.openSurvey){
+        const e=mine().find(entry=>entry.id===button.dataset.openSurvey);
+        if(!e||!e.approved){toast("설문을 진행할 이수 내역이 없습니다.");return;}
+        const program=state.programs.find(p=>p.id===e.programId);
+        const formUrl=program?.surveyForm?.googleFormUrl||"";
+        if(!/^https:\/\/(docs\.google\.com\/forms\/|forms\.gle\/)/i.test(formUrl)){
+          toast("연결된 구글폼 링크가 없습니다. 관리자에게 문의하세요.");
+          return;
+        }
+        window.open(formUrl,"_blank","noopener,noreferrer");
+        e.surveyOpenedAt=new Date().toISOString();
+        const saved=save();
+        renderStudent();
+        if(saved)toast("구글폼을 열었습니다. 작성 후 '설문 완료 확인'을 눌러주세요.");
+        return;
+      }
+      if(button.dataset.markSurveyDone){
+        const e=mine().find(entry=>entry.id===button.dataset.markSurveyDone);
+        if(!e||!e.approved){toast("설문 완료를 확인할 이수 내역이 없습니다.");return;}
+        const program=state.programs.find(p=>p.id===e.programId);
+        const formUrl=program?.surveyForm?.googleFormUrl||"";
+        if(!/^https:\/\/(docs\.google\.com\/forms\/|forms\.gle\/)/i.test(formUrl)){
+          toast("연결된 구글폼 링크가 없어 설문 완료 확인을 할 수 없습니다.");
+          return;
+        }
+        if(!e.surveyOpenedAt){
+          toast("먼저 구글폼을 열고 설문을 작성해 주세요.");
+          return;
+        }
+        e.surveyDone=true;
+        const saved=save();
+        renderStudent();
+        if(saved)toast("만족도조사 완료가 확인되었습니다. 이제 이수증을 확인할 수 있습니다.");
+        return;
+      }
       if(button.dataset.certificate)printReport("certificate",button.dataset.certificate);
       if(button.dataset.deleteJournal){
         const file=currentPracticeFiles().find(x=>x.id===button.dataset.deleteJournal);
         if(file){pendingDelete=file.id;$("infoTitle").textContent="업로드 자료 삭제";$("infoBody").textContent=`‘${file.title||file.fileName||"자료"}’ 파일을 삭제합니다. 복구할 수 없습니다.`;const confirm=document.createElement("button");confirm.textContent="삭제 확인";confirm.id="confirmDelete";confirm.className="primary";$("infoDialog").querySelector(".dialog-actions").append(confirm);$("infoDialog").showModal();}
+      }
+      if(button.dataset.clearSurveyForm){
+        const p=state.programs.find(program=>program.id===button.dataset.clearSurveyForm);
+        if(!p){toast("초기화할 프로그램을 찾을 수 없습니다.");return;}
+        delete p.surveyForm;
+        const saved=save();
+        renderPrograms();
+        if(saved)toast("만족도조사 폼을 초기화했습니다.");
       }
       if(button.id==="confirmDelete"){
         const owner=ensureStudentData();
@@ -1521,6 +1820,30 @@
       const saved=save();$("programDialog").close();$("programForm").reset();$("programDate").value=today();renderAll();setMode(false,"courses");if(saved)toast("프로그램이 개설되었습니다. 교육별 신청자를 관리할 수 있습니다.");
     });
     $("programName").addEventListener("input",()=>$("programName").setCustomValidity(""));
+    document.addEventListener("submit",event=>{
+      const form=event.target;
+      if(!(form instanceof HTMLFormElement) || form.id!=="programSurveyForm")return;
+      event.preventDefault();
+      if(storageBlocked){toast("저장이 차단되어 있습니다. 상단 오류 안내를 확인하세요.");return;}
+      const p=state.programs.find(program=>program.id===managedProgramId);
+      if(!p){toast("설문을 저장할 프로그램을 찾을 수 없습니다.");return;}
+      const googleFormUrl=($("programSurveyGoogleFormUrl")?.value||"").trim();
+      if(!googleFormUrl){toast("Google Form URL을 입력하세요.");return;}
+      if(googleFormUrl && !/^https:\/\/(docs\.google\.com\/forms\/|forms\.gle\/)/i.test(googleFormUrl)){
+        toast("Google Form URL 형식을 확인하세요.");
+        return;
+      }
+      p.surveyForm={
+        title:"Google Form 연동",
+        type:"post",
+        questions:["Google Form 링크로 이동하여 응답 작성"],
+        googleFormUrl,
+        updatedAt:new Date().toISOString()
+      };
+      const saved=save();
+      renderPrograms();
+      if(saved)toast("만족도조사 폼을 저장했습니다.");
+    });
     $("paymentForm").addEventListener("submit",event=>{
       event.preventDefault();const p=state.programs.find(x=>x.id===paymentProgram);
       const type=p?availableApplication(p):null;
